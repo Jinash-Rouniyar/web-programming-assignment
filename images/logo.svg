@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="JR monogram">
+  <!-- Outer ring uses Midnight from the stylesheet palette -->
+  <circle cx="60" cy="60" r="56" fill="#1b2838"/>
+  <!-- Inner circle uses Ivory so the monogram sits on the page background color -->
+  <circle cx="60" cy="60" r="50" fill="#f4efe6"/>
+  <!-- Initials use Copper, the accent color for headings and links -->
+  <text x="60" y="72" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="bold" fill="#b56a3c">JR</text>
+</svg>
