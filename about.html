@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Jinash Rouniyar</title>
 
-  <!-- External stylesheet: color palette, fonts, and layout for this page -->
+  <!-- External stylesheet: color palette, fonts, and page layout (grid + flexbox) -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,53 +18,76 @@
     <p class="tagline">Why I build the things I build</p>
   </header>
 
-  <!-- Portrait section: photo, name, and role of the site creator -->
-  <section class="about-intro">
-    <img class="portrait" src="images/jinash.jpg" alt="Portrait of Jinash Rouniyar">
-    <p class="about-name">Jinash Rouniyar</p>
-    <p class="about-role">Student and software builder · Atlanta, GA</p>
-  </section>
+  <!--
+    Page layout wrapper: two regions required by the assignment.
+    CSS Grid in styles.css places .site-nav on the left and .page-content on the right.
+  -->
+  <div class="page-layout">
 
-  <!-- Main content area containing the three styled paragraphs -->
-  <main>
+    <!-- Navigation region: in-page links to About, Why, and Connect -->
+    <nav class="site-nav" aria-label="Page sections">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#why">Why this site</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
 
-    <!-- First paragraph: why the site was created — Trebuchet body, ink text, soft clay background -->
-    <p>
-      I created this site as a home for the work I do and a place to explain why
-      I do it. Most of my time goes into applications: tools that help people
-      search, write, learn, or make sense of data. A personal page felt necessary
-      because those projects live in different repos and hackathon write-ups, and
-      I wanted one page that ties them back to the person who made them.
-    </p>
+    <!-- Content region: portrait, paragraphs, and social links -->
+    <div class="page-content">
 
-    <!-- Second paragraph: what motivated the work — Georgia italic role text above, ink body here -->
-    <p>
-      The motivation is simple. I am a student at Georgia State University, and
-      building is how I learn. Internships, research, and side projects taught me
-      that I care less about a finished demo and more about whether something is
-      actually useful. That is why I keep making sites and applications — each one
-      is a chance to take an idea I wish existed and put it in front of someone else.
-    </p>
+      <!-- Portrait section: photo, name, and role of the site creator -->
+      <section class="about-intro" id="about">
+        <img class="portrait" src="images/jinash.jpg" alt="Portrait of Jinash Rouniyar">
+        <p class="about-name">Jinash Rouniyar</p>
+        <p class="about-role">Student and software builder · Atlanta, GA</p>
+      </section>
 
-    <!-- Third paragraph: palette and fonts chosen for the page, plus a pointer to social links -->
-    <p>
-      I also wanted a page that feels like me, not like a template. The colors and
-      fonts in the stylesheet are a small palette I chose on purpose: warm paper,
-      ink, and copper. If you want to see more of the work, the links below go to
-      my GitHub, LinkedIn, and the rest of my site.
-    </p>
+      <!-- Main content area containing the three styled paragraphs -->
+      <main id="why">
 
-  </main>
+        <!-- First paragraph: why the site was created — Trebuchet body, ink text, soft clay background -->
+        <p>
+          I created this site as a home for the work I do and a place to explain why
+          I do it. Most of my time goes into applications: tools that help people
+          search, write, learn, or make sense of data. A personal page felt necessary
+          because those projects live in different repos and hackathon write-ups, and
+          I wanted one page that ties them back to the person who made them.
+        </p>
 
-  <!-- Social section: links to GitHub, LinkedIn, and the personal site -->
-  <section class="social-section">
-    <h2>Find me online</h2>
-    <ul class="social-links">
-      <li><a href="https://github.com/Jinash-Rouniyar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/jinash-rouniyar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://www.jinash.com" target="_blank" rel="noopener noreferrer">jinash.com</a></li>
-    </ul>
-  </section>
+        <!-- Second paragraph: what motivated the work — Georgia italic role text above, ink body here -->
+        <p>
+          The motivation is simple. I am a student at Georgia State University, and
+          building is how I learn. Internships, research, and side projects taught me
+          that I care less about a finished demo and more about whether something is
+          actually useful. That is why I keep making sites and applications — each one
+          is a chance to take an idea I wish existed and put it in front of someone else.
+        </p>
+
+        <!-- Third paragraph: palette and fonts chosen for the page, plus a pointer to social links -->
+        <p>
+          I also wanted a page that feels like me, not like a template. The colors and
+          fonts in the stylesheet are a small palette I chose on purpose: warm paper,
+          ink, and copper. If you want to see more of the work, the links below go to
+          my GitHub, LinkedIn, and the rest of my site.
+        </p>
+
+      </main>
+
+      <!-- Social section: links to GitHub, LinkedIn, and the personal site -->
+      <section class="social-section" id="connect">
+        <h2>Find me online</h2>
+        <ul class="social-links">
+          <li><a href="https://github.com/Jinash-Rouniyar" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jinash-rouniyar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.jinash.com" target="_blank" rel="noopener noreferrer">jinash.com</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+  </div>
 
 </body>
 </html>

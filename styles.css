@@ -32,12 +32,12 @@ body {
   line-height: 1.7;
   color: #1f2a37;
   background-color: #f4efe6;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 28px 20px;
 }
 
-/* Header styles: title area at the top of the page */
+/* Header styles: title area at the top of the page (full width above the grid) */
 header {
   background-color: #1b2838;
   color: #ffffff;
@@ -66,6 +66,72 @@ header .tagline {
   font-style: italic;
   font-size: 1.05rem;
   color: #ead9c4;
+}
+
+/*
+  PAGE LAYOUT (CSS Grid)
+  ----------------------
+  Two columns: a fixed-width navigation region on the left
+  and a flexible content region on the right.
+  grid-template-columns: 220px 1fr
+    — first track is the nav (220px)
+    — second track is the content (the remaining space)
+*/
+.page-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas: "nav content";
+  gap: 24px;
+  align-items: start;
+}
+
+.site-nav {
+  grid-area: nav;
+}
+
+.page-content {
+  grid-area: content;
+}
+
+/*
+  NAVIGATION REGION (Flexbox)
+  ---------------------------
+  Flexbox stacks the heading and the list of links in a column
+  inside the left grid track. The list itself is also a column flex
+  container so each link has even spacing.
+*/
+.site-nav {
+  background-color: #ffffff;
+  padding: 20px 18px;
+  border-radius: 8px;
+  border-left: 4px solid #b56a3c;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-nav h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #b56a3c;
+  font-size: 1.15rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.site-nav a {
+  color: #b56a3c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: #8c4a28;
+  text-decoration: underline;
 }
 
 /* Intro section: centers the portrait, name, and role */
@@ -145,4 +211,23 @@ main p:last-child {
 .social-links a:hover {
   color: #8c4a28;
   text-decoration: underline;
+}
+
+/*
+  Narrow screens: stack the layout into one column so nav sits
+  above content instead of beside it.
+*/
+@media (max-width: 700px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "content";
+  }
+
+  .site-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
 }
