@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+	<h2>Login</h2>
+	<!-- Form posts username and password to the /login endpoint -->
+	<form action="/login" method="POST">
+		<label for="username">Username</label><br>
+		<input type="text" name="username" id="username" size="20" required /><br>
+
+		<label for="password">Password</label><br>
+		<input type="password" name="password" id="password" size="50" required /><br>
+
+		<input type="submit" value="Login" />
+	</form>
+	<!-- After a successful login, the server stores the username in a session -->
+	<p>Need an account? <a href="register.html">Register</a></p>
+	<p>Already logged in? <a href="/profile">Profile</a></p>
+</body>
+</html>
+
